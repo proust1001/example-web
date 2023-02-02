@@ -117,16 +117,44 @@ for (let i = 0; i < populations.length; i++) {
 
 console.log(percentages2);
 
-//(NOT FINISH) ASSIGNMENT LECTURE: Looping Backwards and Loops in Loops 
-const jonas = [
-    'Jonas',
-    'Smith',
-    2037 - 1991,
-    'teacher'
-    ['Michael', 'James', 'Jimmy']
-];
+//ASSIGNMENT LECTURE: Looping Backwards and Loops in Loops 
+const listOfNeighbours = [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden', 'Russia']];
+for (i = 0; i < listOfNeighbours.length; i++) {
+    for (j = 0; j < listOfNeighbours[i].length; j++) {
+        console.log(`Neighbour: ${listOfNeighbours[i][j]}`);
+    }
+}
 
-for (let i = jonas.length - 1; i >= 0; i--) {
+//ASSIGNMENT LECTURE: The while Loop
+const percentages3 = [];
+let n = 0;
+while (n < populations.length) {
+    percentages3.push(percentageOfWorld1(populations[n]));
+    n++;
+}
 
-} 
+console.log(percentages3);
 
+//CODING CHALLENGE 4:
+const bills2 = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips2 = [];
+const totals2 = [];
+
+for (i = 0; i < bills2.length; i++) {
+    tips2.push(calcTip(bills2[i]));
+    totals2.push(tips2[i] + bills2[i]);
+}
+
+console.log(bills2);
+console.log(tips2);
+console.log(totals2);
+
+let sum = 0;
+function calcAverage2(arr) {
+    for (i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}
+
+console.log(calcAverage2([1, 2, 3]));
